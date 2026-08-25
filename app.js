@@ -157,7 +157,7 @@ function sendOrderToWhatsApp() {
     const message = `*Novo Pedido Realizado!*\n\n*Itens:*\n${orderDetails}\n\n*Total:* R$ ${total.toFixed(2)}\n\n*Observações:*`;   
     const encodedMessage = encodeURIComponent(message);
     
-    const whatsappUrl = `https://wa.me/$https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
     window.open(whatsappUrl, '_blank');
 }
