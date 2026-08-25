@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Digital | Menu Interativo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1 class="logo">Padaria<span>Santos</span></h1>
+            <button class="cart-toggle-btn" id="cartToggle">
+                Carrinho (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <nav class="categories">
+            <button class="category-btn active" data-category="all">Todos</button>
+            <button class="category-btn" data-category="comidas">Comidas</button>
+            <button class="category-btn" data-category="bebidas">Bebidas</button>
+        </nav>
+
+        <section class="products-grid" id="productsGrid">
+            <article class="product-card">
+                <div class="product-image"></div>
+                <div class="product-info">
+                    <h3>Produto Exemplo</h3>
+                    <p class="product-price">R$ 25,00</p>
+                    <button class="add-to-cart-btn">Adicionar</button>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <aside class="sidebar" id="cartSidebar">
+        <div class="sidebar-header">
+            <h2>Seu Carrinho</h2>
+            <button class="close-btn" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="sidebar-footer">
+            <div class="total-container">
+                <span>Total:</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            <button class="checkout-btn" disabled>Finalizar Pedido</button>
+        </div>
+    </aside>
+
+    <script src="app.js"></script>
+</body>
+</html>
